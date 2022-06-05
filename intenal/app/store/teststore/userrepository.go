@@ -1,7 +1,7 @@
-package sqlstore
+package teststore
 
 import (
-	"fmt"
+	"errors"
 
 	"github.com/honyshyota/http-rest-api/intenal/app/model"
 )
@@ -9,6 +9,7 @@ import (
 // UserRepository ...
 type UserRepository struct {
 	store *Store
+	users map[string]*model.User
 }
 
 // Create ...
@@ -21,26 +22,18 @@ func (r *UserRepository) Create(u *model.User) error {
 		return err
 	}
 
-	return r.store.db.QueryRow(
-		"INSERT INTO users (email, encrypted_password) VALUES ($1, $2) RETURNING id",
-		u.Email,
-		u.EncryptedPassword,
-	).Scan(&u.ID)
+	r.users[u.Email] = u
+	u.ID = len(r.users)
+
+	return nil
 }
 
 // FindByEmail ...
 func (r *UserRepository) FindByEmail(email string) (*model.User, error) {
-	u := &model.User{}
-	if err := r.store.db.QueryRow(
-		"SELECT id, email, encrypted_password FROM users WHERE email = $1",
-		email,
-	).Scan(
-		&u.ID,
-		&u.Email,
-		&u.EncryptedPassword,
-	); err != nil {
-		return nil, err
+	u, ok := r.users[email]
+	if !ok {
+		return nil, errors.New("not found user")
 	}
-	fmt.Println(u.Email)
+
 	return u, nil
 }

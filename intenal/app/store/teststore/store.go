@@ -1,23 +1,18 @@
-package sqlstore
+package teststore
 
 import (
-	"database/sql"
-
+	"github.com/honyshyota/http-rest-api/intenal/app/model"
 	"github.com/honyshyota/http-rest-api/intenal/app/store"
-	_ "github.com/lib/pq" // ...
 )
 
 // Store ...
 type Store struct {
-	db             *sql.DB
 	UserRepository *UserRepository
 }
 
 // New ...
-func New(db *sql.DB) *Store {
-	return &Store{
-		db: db,
-	}
+func New() *Store {
+	return &Store{}
 }
 
 // User ...
@@ -28,6 +23,7 @@ func (s *Store) User() store.UserRepository {
 
 	s.UserRepository = &UserRepository{
 		store: s,
+		users: make(map[string]*model.User),
 	}
 
 	return s.UserRepository
