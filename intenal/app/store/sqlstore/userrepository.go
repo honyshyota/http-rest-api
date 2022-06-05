@@ -1,6 +1,10 @@
-package store
+package sqlstore
 
-import "github.com/honyshyota/http-rest-api/intenal/app/model"
+import (
+	"fmt"
+
+	"github.com/honyshyota/http-rest-api/intenal/app/model"
+)
 
 // UserRepository ...
 type UserRepository struct {
@@ -41,6 +45,6 @@ func (r *UserRepository) FindByEmail(email string) (*model.User, error) {
 	); err != nil {
 		return nil, err
 	}
-
+	fmt.Println(u.Email)
 	return u, nil
 }
