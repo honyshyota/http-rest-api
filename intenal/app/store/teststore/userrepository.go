@@ -1,9 +1,8 @@
 package teststore
 
 import (
-	"errors"
-
 	"github.com/honyshyota/http-rest-api/intenal/app/model"
+	"github.com/honyshyota/http-rest-api/intenal/app/store"
 )
 
 // UserRepository ...
@@ -32,7 +31,7 @@ func (r *UserRepository) Create(u *model.User) error {
 func (r *UserRepository) FindByEmail(email string) (*model.User, error) {
 	u, ok := r.users[email]
 	if !ok {
-		return nil, errors.New("not found user")
+		return nil, store.ErrRecordNotFound
 	}
 
 	return u, nil
