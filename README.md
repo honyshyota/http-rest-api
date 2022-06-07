@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://github.com/honyshyota/http-rest-api/blob/master/images/rest_api.png" alt="Project logo"></a>
+ <img width=400px height=200px src="https://github.com/honyshyota/http-rest-api/blob/master/images/rest_api.png" alt="Project logo"></a>
 </p>
 
 <h3 align="center">Project Title</h3>
