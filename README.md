@@ -51,6 +51,8 @@ Use make to build the project, then you need to enter the name of the resulting 
 ./apiserver
 ```
 
+I recommend using [httpie](https://httpie.io/) for http requests
+
 ## ⛏️ Built Using <a name = "built_using"></a>
 
 - [PostgreSQL](https://www.postgresql.org/) - Database
