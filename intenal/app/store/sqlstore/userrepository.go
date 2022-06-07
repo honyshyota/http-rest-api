@@ -2,7 +2,6 @@ package sqlstore
 
 import (
 	"database/sql"
-	"fmt"
 
 	"github.com/honyshyota/http-rest-api/intenal/app/model"
 	"github.com/honyshyota/http-rest-api/intenal/app/store"
@@ -68,6 +67,6 @@ func (r *UserRepository) Find(id int) (*model.User, error) {
 
 		return nil, err
 	}
-	fmt.Println(u.Email)
+
 	return u, nil
 }
