@@ -11,18 +11,6 @@
     <br> 
 </p>
 
-## 📝 Table of Contents
-
-- [About](#about)
-- [Getting Started](#getting_started)
-- [Deployment](#deployment)
-- [Usage](#usage)
-- [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
-- [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
-
 ## 🧐 About <a name = "about"></a>
 
 my task was to write a simple rest api service, with coockies,
@@ -52,45 +40,24 @@ store_test.go
 userrepository_test.go
 ```
 
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
 ## 🎈 Usage <a name="usage"></a>
 
-Add notes about how to use the system.
+```
+make
+```
+Use make to build the project, then you need to enter the name of the resulting file into the console to run
 
-## 🚀 Deployment <a name = "deployment"></a>
-
-Add additional notes about how to deploy this on a live system.
+```
+./apiserver
+```
 
 ## ⛏️ Built Using <a name = "built_using"></a>
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+- [PostgreSQL](https://www.postgresql.org/) - Database
+- [Toml](github.com/BurntSushi/toml) - Config
+- [Gorilla Mux](github.com/gorilla/mux) - Router
 
-## ✍️ Authors <a name = "authors"></a>
+## 🎉 And look
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
-
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
-
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+![alt text](https://github.com/honyshyota/http-rest-api/blob/master/images/http_request.png)
+![alt text](https://github.com/honyshyota/http-rest-api/blob/master/images/logger.png)
