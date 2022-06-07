@@ -7,7 +7,7 @@
 
 ---
 
-<p align="center"> Few lines describing your project.
+<p align="center"> My study project with gopher school.
     <br> 
 </p>
 
@@ -25,41 +25,32 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+my task was to write a simple rest api service, with coockies,
+authentication, registration, storage, and also mock storage and tests
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
-
-### Prerequisites
-
-What things you need to install the software and how to install them.
-
+Use
 ```
-Give examples
+git clone https://github.com/honyshyota/http-rest-api
 ```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo.
+for copy this repository in your local machine
+and you must have postgresql installed and given trust permissions for local users
 
 ## 🔧 Running the tests <a name = "tests"></a>
 
-Explain how to run the automated tests for this system.
+```
+make test
+```
+to run all tests via makefile.
+
+individual package tests can be accessed via files:
+```
+server_internal_test.go
+user_test.go
+store_test.go
+userrepository_test.go
+```
 
 ### Break down into end to end tests
 
